@@ -32,16 +32,22 @@
 .welcome-text {
   text-align: center;
   margin-bottom: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05); /* semi-transparent white background */
+  backdrop-filter: blur(10px); /* Blur effect */
+  border-radius: 10px; /* Optional: rounded corners */
 }
 
 .welcome-text h1 {
   color: #333;
   font-size: 48px;
+  margin: 0;
 }
 
 .welcome-text p {
   color: #555;
   font-size: 24px;
+  margin:  10px 0 0 0;
 }
 
 .search-bar {
