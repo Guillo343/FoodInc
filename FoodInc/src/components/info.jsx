@@ -1,7 +1,10 @@
 import React from 'react'
+import axios from 'axios'
 import '../style/info.css'
 
-export const Api = () => {
+export const Info = () => {
+
+
   return (
     <div className="recipe-container">
     <div className="recipe-header">

@@ -1,15 +1,17 @@
 import './App.css'
 import { Navbar } from './components/navbar'
 import { Searcher } from './components/searcher'
-import { Api } from './components/api'
+import { Info } from './components/info'
+import { RecipeSearch } from './components/recipeSearch'
 
 function App() {
 
   return (
     <>
-       <Navbar />
+       {/* <Navbar /> */}
        <Searcher />
-       <Api />
+       <Info />
+       <RecipeSearch />
     </>
   )
 }

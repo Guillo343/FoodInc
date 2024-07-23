@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import '../style/searcher.css';
+import { InputSearcher } from './InputSearcher';
 
 import video1 from '../assets/video1.mp4';
 import video2 from '../assets/video2.mp4';
@@ -59,7 +60,7 @@ export const Searcher = () => {
             <p>Discover delicious recipes and learn how to cook amazing dishes.</p>
           </div>
           <div className="search-bar">
-            <input type="text" placeholder="Search recipes..." />
+            <InputSearcher  />
           </div>
         </div>
       </div>
