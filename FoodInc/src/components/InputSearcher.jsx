@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import '../style/inputsearcher.css';
 import '../style/inputsearcher.css'
 
 export const InputSearcher = () => {
   const [query, setQuery] = useState('');
   const [recipes, setRecipes] = useState([]);
+  const [suggestions, setSuggestions] = useState([]);
 
   const searchRecipes = async () => {
     const appId = '73dac63d'; 
@@ -19,27 +19,65 @@ export const InputSearcher = () => {
       console.error('Error fetching the recipes:', error);
     }
   };
+  
+  const handleInputChange = async (e) => {
+    setQuery(e.target.value);
+    if (e.target.value.length > 2) {
+      const appId = '73dac63d'; 
+      const appKey = 'd1028008b4d4b93db076b80a86b7a54d'; 
+      const url = `https://api.edamam.com/auto-complete?q=${e.target.value}&app_id=${appId}&app_key=${appKey}`;
+      try {
+        const response = await axios.get(url);
+        setSuggestions(response.data);
+      } catch (error) {
+        console.error('Error fetching the suggestions:', error);
+      }
+    } else {
+      setSuggestions([]);
+    }
+  };
+
+  const handleSuggestionClick = (suggestion) => {
+    setQuery(suggestion);
+    setSuggestions([]);
+    searchRecipes();
+  };
 
   return (
     <div className="input-searcher">
+    <div className="input-wrapper">
       <input
         type="text"
         value={query}
-        onChange={(e) => setQuery(e.target.value)}
+        onChange={handleInputChange}
         placeholder="Search recipes..."
       />
       <button onClick={searchRecipes}>Search</button>
-      <div className="recipes-list">
-        {recipes.map((recipe, index) => (
-          <div key={index} className="recipe-item">
-            <h3>{recipe.recipe.label}</h3>
-            <img src={recipe.recipe.image} alt={recipe.recipe.label} />
-            <p>{recipe.recipe.source}</p>
-            <a href={recipe.recipe.url} target="_blank" rel="noopener noreferrer">View Recipe</a>
+    </div>
+    {suggestions.length > 0 && (
+      <div className="suggestions-list">
+        {suggestions.map((suggestion, index) => (
+          <div
+            key={index}
+            className="suggestion-item"
+            onClick={() => handleSuggestionClick(suggestion)}
+          >
+            {suggestion}
           </div>
         ))}
       </div>
+    )}
+    <div className="recipes-list">
+      {recipes.map((recipe, index) => (
+        <div key={index} className="recipe-item">
+          <h3>{recipe.recipe.label}</h3>
+          <img src={recipe.recipe.image} alt={recipe.recipe.label} />
+          <p>{recipe.recipe.source}</p>
+          <a href={recipe.recipe.url} target="_blank" rel="noopener noreferrer">View Recipe</a>
+        </div>
+      ))}
     </div>
+  </div>
   );
 };
 
