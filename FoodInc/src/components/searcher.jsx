@@ -43,27 +43,36 @@ export const Searcher = () => {
   }, [videos]);
 
   return (
-    <>
       <div className="video-background">
-        {videos.map((video, index) => (
-          <video
-            key={index}
-            src={video}
-            ref={el => (videoRefs.current[index] = el)}
-            muted
-            style={{ display: index === 0 ? 'block' : 'none' }}
-          />
-        ))}
-        <div className="overlay">
-          <div className="welcome-text">
-            <h1>Welcome to FoodInc</h1>
-            <p>Discover delicious recipes and learn how to cook amazing dishes.</p>
+      {videos.map((video, index) => (
+        <video
+          key={index}
+          src={video}
+          ref={el => (videoRefs.current[index] = el)}
+          muted
+          style={{ display: index === 0 ? 'block' : 'none' }}
+        />
+      ))}
+      <div className="overlay">
+        <div className="welcome-text">
+          <h1>Welcome to FoodInc</h1>
+          <p>Discover delicious recipes and learn how to cook amazing dishes.</p>
+        </div>
+        <div className="columns">
+          <div className="column">
+            <p>Over 100 Recipes!</p>
           </div>
-          <div className="search-bar">
-            {/* <InputSearcher  /> */}
+          <div className="column">
+            <p>From all over the World</p>
+          </div>
+          <div className="column">
+            <p>New Dishes Added Weekly</p>
           </div>
         </div>
+        <div className="search-bar">
+          {/* <InputSearcher /> */}
+        </div>
       </div>
-    </>
+    </div>
   );
 };
