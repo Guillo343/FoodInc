@@ -1,5 +1,3 @@
-/* searcher.css */
-
 .video-background {
   position: relative;
   width: 100%;
@@ -26,16 +24,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: rgba(255, 255, 255, 0.3); /* semi-transparent white overlay */
+  background: rgba(255, 255, 255, 0.3); 
 }
 
 .welcome-text {
   text-align: center;
   margin-bottom: 20px;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.05); /* semi-transparent white background */
-  backdrop-filter: blur(10px); /* Blur effect */
-  border-radius: 10px; /* Optional: rounded corners */
+  background: rgba(255, 255, 255, 0.05); 
+  backdrop-filter: blur(10px); 
+  border-radius: 10px; 
 }
 
 .welcome-text h1 {

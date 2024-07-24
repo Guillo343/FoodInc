@@ -60,7 +60,7 @@ export const Searcher = () => {
             <p>Discover delicious recipes and learn how to cook amazing dishes.</p>
           </div>
           <div className="search-bar">
-            <InputSearcher  />
+            {/* <InputSearcher  /> */}
           </div>
         </div>
       </div>
