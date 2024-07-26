@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import '../style/inputsearcher.css'
+import { APP_ID, APP_KEY } from '../constants/credentials';
 
 export const InputSearcher = () => {
   const [query, setQuery] = useState('');
@@ -8,9 +9,7 @@ export const InputSearcher = () => {
   const [suggestions, setSuggestions] = useState([]);
 
   const searchRecipes = async () => {
-    const appId = '73dac63d'; 
-    const appKey = 'd1028008b4d4b93db076b80a86b7a54d'; 
-    const url = `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${appId}&app_key=${appKey}`;
+    const url = `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`;
 
     try {
       const response = await axios.get(url);
@@ -23,9 +22,7 @@ export const InputSearcher = () => {
   const handleInputChange = async (e) => {
     setQuery(e.target.value);
     if (e.target.value.length > 2) {
-      const appId = '73dac63d'; 
-      const appKey = 'd1028008b4d4b93db076b80a86b7a54d'; 
-      const url = `https://api.edamam.com/auto-complete?q=${e.target.value}&app_id=${appId}&app_key=${appKey}`;
+      const url = `https://api.edamam.com/auto-complete?q=${e.target.value}&app_id=${APP_ID}&app_key=${APP_KEY}`;
       try {
         const response = await axios.get(url);
         setSuggestions(response.data);
@@ -80,4 +77,3 @@ export const InputSearcher = () => {
   </div>
   );
 };
-
