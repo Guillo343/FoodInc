@@ -9,8 +9,7 @@ function App() {
 
   return (
     <>
-       {/* <Navbar /> */}
-       <Searcher />
+          <Searcher />
        <Info />
        <InputSearcher/>
     </>
