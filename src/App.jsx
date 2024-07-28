@@ -9,9 +9,9 @@ function App() {
 
   return (
     <>
-          <Searcher />
-       <Info />
-       <InputSearcher/>
+      <Searcher />
+      <Info />
+      <InputSearcher/>
     </>
   )
 }
