@@ -1,18 +1,18 @@
-import React from 'react'
-import '../style/navbar.css'
+import React from 'react';
+import '../style/navbar.css';
 
 export const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <a href="/">FoodInc</a>
+        <a href="/"><img src="../../public/logoAlt.png" alt="Logo" /> FoodInc</a>
       </div>
       <ul className="navbar-menu">
-        <li><a href="/recipes">Recipes</a></li>
-        <li><a href="/how-to">How-To</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/contact">Contact</a></li>
+        <li><a className="underlineLink" href="/search">Search</a></li>
+        <li><a className="underlineLink" href="/recipes">Recipes</a></li>
+        <li><a className="underlineLink" href="/about">About</a></li>
+        <li><a className="underlineLink" href="/contact">Contact Us</a></li>
       </ul>
     </nav>
-  )
-}
+  );
+};

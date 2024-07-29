@@ -2,10 +2,10 @@ import React, { useEffect, useRef } from 'react';
 import '../style/searcher.css';
 import { InputSearcher } from './InputSearcher';
 
-import video1 from '../../public/video1.mp4';
-import video2 from '../../public/video2.mp4';
-import video3 from '../../public/video3.mp4';
-import video4 from '../../public/video4.mp4';
+import video1 from '/video1.mp4';
+import video2 from '/video2.mp4';
+import video3 from '/video3.mp4';
+import video4 from '/video4.mp4';
 
 export const Searcher = () => {
   const videoRefs = useRef([]);
