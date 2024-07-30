@@ -43,7 +43,6 @@ export const Info = () => {
     </div>
     <div className="photos">
       <h2>Photos</h2>
-      {/* Add photos here */}
     </div>
   </div>
   )
