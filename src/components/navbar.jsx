@@ -6,7 +6,7 @@ export const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <a href="/"><img src="../../public/logoAlt.png" alt="Logo" /> FoodInc</a>
+        <a href="/"><img src="/logoAlt.png" alt="Logo" /> FoodInc</a>
       </div>
       <ul className="navbar-menu">
         <li><Link className="underlineLink" href="/search">Search</Link></li>
