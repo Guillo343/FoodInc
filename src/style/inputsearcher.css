@@ -93,11 +93,12 @@
 }
 
 .recipe-item a {
-  color: #007bff;
+  color: #ff5722;
   text-decoration: none;
   margin-top: 10px;
 }
 
 .recipe-item a:hover {
   text-decoration: underline;
+  transition: 0.25s ease-in-out;
 }
