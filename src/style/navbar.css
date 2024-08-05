@@ -10,7 +10,7 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: #ff5722;
-  padding: 1rem 2rem; 
+  padding: 1rem 2rem;
 }
 
 .navbar-logo {
@@ -19,8 +19,8 @@ body {
 }
 
 .navbar-logo img {
-  height: 50px; 
-  margin-right: 15px; 
+  height: 50px;
+  margin-right: 15px;
 }
 
 .navbar-logo a {
@@ -41,7 +41,7 @@ body {
 }
 
 .navbar-menu li {
-  margin-left: 2rem; 
+  margin-left: 2rem;
 }
 
 .underlineLink {
@@ -71,6 +71,47 @@ body {
   font-weight: bold;
 }
 
-.underlineLink:hover:after {
+.underlineLink:hover:after,
+.underlineLink.active:after {
   width: 100%;
+}
+
+/* Hide the toggle button by default */
+.navbar-toggle {
+  display: none;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .navbar-logo {
+    margin-bottom: 1rem;
+  }
+
+  .navbar-menu {
+    flex-direction: column;
+    display: none; /* Hide the menu by default */
+    width: 100%;
+  }
+
+  .navbar-menu.active {
+    display: flex; /* Show the menu when active */
+  }
+
+  .navbar-menu li {
+    margin-left: 0;
+    margin-bottom: 1rem;
+  }
+
+  /* Show the toggle button on small screens */
+  .navbar-toggle {
+    display: block;
+    cursor: pointer;
+    color: white;
+    font-size: 2rem;
+  }
 }
