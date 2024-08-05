@@ -76,12 +76,10 @@ body {
   width: 100%;
 }
 
-/* Hide the toggle button by default */
 .navbar-toggle {
   display: none;
 }
 
-/* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
@@ -91,23 +89,18 @@ body {
   .navbar-logo {
     margin-bottom: 1rem;
   }
-
   .navbar-menu {
     flex-direction: column;
-    display: none; /* Hide the menu by default */
+    display: none; 
     width: 100%;
   }
-
   .navbar-menu.active {
-    display: flex; /* Show the menu when active */
+    display: flex; 
   }
-
   .navbar-menu li {
     margin-left: 0;
     margin-bottom: 1rem;
   }
-
-  /* Show the toggle button on small screens */
   .navbar-toggle {
     display: block;
     cursor: pointer;
