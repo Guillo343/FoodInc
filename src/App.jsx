@@ -7,6 +7,7 @@ import { RecipeSearch } from "./components/recipeSearch";
 import { InputSearcher } from "./components/InputSearcher";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { About } from "./components/About";
+import { Footer } from "./components/Footer";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/input-searcher" element={<InputSearcher />} />
         <Route path="/recipe-search" element={<RecipeSearch />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }

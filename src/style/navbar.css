@@ -11,6 +11,9 @@ body {
   align-items: center;
   background-color: #ff5722;
   padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .navbar-logo {
@@ -89,18 +92,22 @@ body {
   .navbar-logo {
     margin-bottom: 1rem;
   }
+
   .navbar-menu {
     flex-direction: column;
-    display: none; 
+    display: none;
     width: 100%;
   }
+
   .navbar-menu.active {
-    display: flex; 
+    display: flex;
   }
+
   .navbar-menu li {
     margin-left: 0;
     margin-bottom: 1rem;
   }
+
   .navbar-toggle {
     display: block;
     cursor: pointer;
