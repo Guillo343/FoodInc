@@ -39,12 +39,12 @@ export const About = () => {
 
         <h2>Community and Collaboration</h2>
         <p>
-          We are passionate about building a vibrant cooking community. We collaborate with chefs, nutritionists, and food bloggers to bring you the best recipes and cooking tips. If you’re interested in partnering with us or have a recipe to share, please reach out!
+          We are passionate about building a vibrant cooking community. We collaborate with chefs, nutritionists, and food bloggers to bring you the best recipes and cooking tips. If you're interested in partnering with us or have a recipe to share, please reach out!
         </p>
 
         <h2>Contact Us</h2>
         <p>
-          Have questions or feedback? We’d love to hear from you! You can contact us via email at <a href="mailto:info@foodinc.com">info@foodinc.com</a> or follow us on social media:
+          Have questions or feedback? We'd love to hear from you! You can contact us via email at <a href="mailto:info@foodinc.com">info@foodinc.com</a> or follow us on social media:
         </p>
         <div className="social-links">
           <a href="https://facebook.com/foodinc" target="_blank" rel="noopener noreferrer">Facebook</a>

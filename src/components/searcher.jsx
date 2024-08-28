@@ -58,19 +58,6 @@ export const Searcher = () => {
           <h1>Welcome to FoodInc</h1>
           <p>Discover delicious recipes and learn how to cook amazing dishes.</p>
         </div>
-        {/* <div className="columns">
-          <div className="column">
-            <p>Over 100 Recipes!</p>
-          </div>
-          <div className="column">
-            <p>From all over the World</p>
-          </div>
-          <div className="column">
-            <p>New Dishes Added Weekly</p>
-          </div> */}
-        {/* </div> */}
-        <div className="search-bar">
-        </div>
       </div>
     </div>
   );

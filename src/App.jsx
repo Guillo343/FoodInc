@@ -16,11 +16,12 @@ function App() {
       <Routes>
         <Route path="/" element={<><Searcher />
                                   <InputSearcher />
-                                  <About />
+                                 
                                   </>} />
         <Route path="/info" element={<Info />} />
         <Route path="/input-searcher" element={<InputSearcher />} />
         <Route path="/recipe-search" element={<RecipeSearch />} />
+        <Route path="*" element={<h2>Page Not Found</h2>} />
       </Routes>
       <Footer />
     </Router>
